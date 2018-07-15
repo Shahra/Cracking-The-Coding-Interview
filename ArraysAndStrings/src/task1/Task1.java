@@ -3,6 +3,8 @@
     cannot use additional data structures?
 */
 
+package task1;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -13,6 +15,7 @@ interface TaskSolution {
 class SolutionUsingArray implements TaskSolution {
 
     public boolean hasAllUniqueCharacters(String s) {
+
         System.out.println("Solution using array. Time complexity: O(n). Space complexity: O(1).");
 
         if(s.length() > 128) {
