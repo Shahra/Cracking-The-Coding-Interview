@@ -1,17 +1,14 @@
-class Node {
-  int data;
-  Node next;
-  public Node(int data) {
-    this.data = data;
-  }
-}
+package structure_implementations;
 
 public class LinkedList {
   Node head;
-  public LinkedList(Node head){
-    this.head = head;
+  public LinkedList(int data){
+    this.head = new Node(data);
   }
-  void appendToTail(int data) {
+  public Node getHead() {
+    return this.head;
+  }
+  public void appendToTail(int data) {
     Node last = new Node(data);
     Node n = head;
     while(n.next != null) {
@@ -19,20 +16,20 @@ public class LinkedList {
     }
     n.next = last;
   }
-  void appendToHead(int data) {
+  public void appendToHead(int data) {
     Node first = new Node(data);
     Node n = head;
     head = first;
     first.next = n;
   }
-  Node appendToNode(Node n, int data) {
+  public Node appendToNode(Node n, int data) {
     Node newNode = new Node(data);
     Node newNodeNext = n.next;
     n.next = newNode;
     newNode.next = newNodeNext;
     return newNode;
   }
-  Node findNodeWithValue(int value) {
+  public Node findNodeWithValue(int value) {
     Node n = head;
     while(n.data != value && n.next != null) {
       n = n.next;
@@ -44,14 +41,14 @@ public class LinkedList {
       return null;
     }
   }
-  void printList() {
+  public void printList() {
     Node n = head;
     while(n != null) {
       System.out.println(n.data);
       n = n.next;
     }
   }
-  void deleteNode(int data) {
+  public void deleteNode(int data) {
     Node n = head;
     if(head.data == data) {
       head = head.next;
@@ -65,7 +62,7 @@ public class LinkedList {
   }
 
   public static void main(String[] args) {
-    LinkedList lList = new LinkedList(new Node(10));
+    LinkedList lList = new LinkedList(10);
     lList.appendToTail(131);
     lList.appendToTail(14);
     lList.appendToHead(12);
