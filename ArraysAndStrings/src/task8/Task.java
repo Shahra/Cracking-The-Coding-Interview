@@ -3,6 +3,8 @@
     column are set to 0.
 */
 
+//TODO Check solution that uses O(1) space
+
 package task8;
 
 interface TaskSolution {
