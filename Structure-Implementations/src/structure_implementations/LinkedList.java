@@ -47,6 +47,7 @@ public class LinkedList {
       System.out.println(n.data);
       n = n.next;
     }
+    System.out.println();
   }
   public void deleteNode(int data) {
     Node n = head;
