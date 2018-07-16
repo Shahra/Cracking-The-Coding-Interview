@@ -5,7 +5,7 @@
   the original string. You can assume the string has only uppercase and lowercase letters (a - z).
 */
 
-package task6;
+package arrays_and_strings.task6;
 
 interface TaskSolution {
   String compressString(String s);

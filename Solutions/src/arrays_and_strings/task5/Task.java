@@ -9,7 +9,7 @@
     pale, bae -) false
 */
 
-package task5;
+package arrays_and_strings.task5;
 
 interface TaskSolution {
   boolean oneAway(String s, String t);

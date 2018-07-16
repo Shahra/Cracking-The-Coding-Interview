@@ -4,7 +4,7 @@
   call to isSubstring (e.g., "waterbottle" a rotation "erbottlewat" ).
 */
 
-package task9;
+package arrays_and_strings.task9;
 
 interface TaskSolution {
   boolean stringRotation(String s, String t);

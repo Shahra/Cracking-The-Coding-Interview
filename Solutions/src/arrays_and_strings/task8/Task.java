@@ -5,7 +5,7 @@
 
 //TODO Check solution that uses O(1) space
 
-package task8;
+package arrays_and_strings.task8;
 
 interface TaskSolution {
   int[][] zeroMatrix(int[][] matrix);

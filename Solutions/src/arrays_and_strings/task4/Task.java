@@ -8,7 +8,7 @@
     Output: True (permutations:"taco cat'; "atco cta'; etc.)
 */
 
-package task4;
+package arrays_and_strings.task4;
 
 
 interface TaskSolution {

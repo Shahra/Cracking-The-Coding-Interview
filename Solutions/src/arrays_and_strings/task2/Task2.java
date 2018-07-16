@@ -4,7 +4,7 @@
 */
 
 
-package task2;
+package arrays_and_strings.task2;
 
 import java.util.Arrays;
 import java.util.Scanner;

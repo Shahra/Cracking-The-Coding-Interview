@@ -3,7 +3,7 @@
     cannot use additional data structures?
 */
 
-package task1;
+package arrays_and_strings.task1;
 
 import java.util.Arrays;
 import java.util.Scanner;

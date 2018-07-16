@@ -3,7 +3,7 @@
   bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
 */
 
-package task7;
+package arrays_and_strings.task7;
 
 interface TaskSolution {
   int[][] rotateMatrix(int[][] matrix);

@@ -5,7 +5,7 @@
     perform this operation in place.)
 */
 
-package task3;
+package arrays_and_strings.task3;
 
 import java.util.Scanner;
 
