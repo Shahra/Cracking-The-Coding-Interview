@@ -1,8 +1,9 @@
 package structure_implementations;
 
+import java.util.Iterator;
 import java.util.Random;
 
-public class LinkedList {
+public class LinkedList implements Iterable<Node> {
   Node head;
 
   public LinkedList(){
@@ -13,8 +14,16 @@ public class LinkedList {
     this.head = new Node(data);
   }
 
+  public boolean isEmpty() {
+    return head == null;
+  }
+
   public Node getHead() {
     return this.head;
+  }
+
+  public void setHead(Node head) {
+    this.head = head;
   }
 
   public void appendToTail(int data) {
@@ -30,11 +39,12 @@ public class LinkedList {
     }
   }
 
-  public void appendToHead(int data) {
+  public Node appendToHead(int data) {
     Node first = new Node(data);
     Node n = head;
     head = first;
     first.next = n;
+    return head;
   }
 
   public Node appendToNode(Node n, int data) {
@@ -105,5 +115,10 @@ public class LinkedList {
       nthNode = nthNode.next;
 
     return nthNode;
+  }
+
+  @Override
+  public Iterator<Node> iterator() {
+    return new LinkedListIterator(this);
   }
 }
