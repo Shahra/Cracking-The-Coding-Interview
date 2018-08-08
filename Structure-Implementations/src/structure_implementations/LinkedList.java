@@ -1,7 +1,13 @@
 package structure_implementations;
 
+import java.util.Random;
+
 public class LinkedList {
   Node head;
+
+  public LinkedList(){
+    this.head = null;
+  }
 
   public LinkedList(int data){
     this.head = new Node(data);
@@ -13,11 +19,15 @@ public class LinkedList {
 
   public void appendToTail(int data) {
     Node last = new Node(data);
-    Node n = head;
-    while(n.next != null) {
-      n = n.next;
+    if(head == null) {
+      head = last;
     }
-    n.next = last;
+    else {
+      Node n = head;
+      while (n.next != null)
+        n = n.next;
+      n.next = last;
+    }
   }
 
   public void appendToHead(int data) {
@@ -68,5 +78,32 @@ public class LinkedList {
     if(n.next != null) {
       n.next = n.next.next;
     }
+  }
+
+  public static LinkedList generateRandomList(int numberOfNodes) {
+    LinkedList randomList = new LinkedList();
+
+    appendToListNodes(randomList, numberOfNodes);
+
+    return randomList;
+  }
+
+  private static void appendToListNodes(LinkedList list, int numberOfNodes) {
+    for(int i = 0; i < numberOfNodes; i++) {
+      list.appendToTail(randomIntegerBetween(1, 100));
+    }
+  }
+
+  private static int randomIntegerBetween(int min, int max) {
+    return new Random().nextInt(max - min + 1) + min;
+  }
+
+  public Node getNthNode(int n) {
+    Node nthNode = head;
+
+    for(int i = 0; i < n; i++)
+      nthNode = nthNode.next;
+
+    return nthNode;
   }
 }
