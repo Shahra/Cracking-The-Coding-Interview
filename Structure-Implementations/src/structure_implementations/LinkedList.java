@@ -26,8 +26,7 @@ public class LinkedList implements Iterable<Node> {
     this.head = head;
   }
 
-  public void appendToTail(int data) {
-    Node last = new Node(data);
+  public void appendToTail(Node last) {
     if(head == null) {
       head = last;
     }
@@ -37,6 +36,11 @@ public class LinkedList implements Iterable<Node> {
         n = n.next;
       n.next = last;
     }
+  }
+
+  public void appendToTail(int data) {
+    Node last = new Node(data);
+    appendToTail(new Node(data));
   }
 
   public Node appendToHead(int data) {
